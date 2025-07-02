@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的静态页面</title>
+    <title>关于我的5分钟内摘要</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>欢迎来到我的页面</h1>
-    </header>
     <main class="center-container">
-        <p>天马行空！！</p>
-        <div class="iframe-wrapper">
-            <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=718795906&bvid=BV1pQ4y1Q7S7&cid=432212688&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+        <h1>关于我</h1>
+        <div class="video-wrapper">
+            <video id="myVideo" width="1000" controls autoplay loop>
+                <source src="https://zxzx-1256991781.cos.ap-beijing.myqcloud.com/%E9%A3%9E%E4%B9%A620250703-000321.mp4" type="video/mp4">
+                您的浏览器不支持 video 标签。
+            </video>
         </div>
     </main>
-
+    <script>
+        // 设置音量为30%
+        document.addEventListener('DOMContentLoaded', function() {
+            var v = document.getElementById('myVideo');
+            v.volume = 0.3;
+        });
+    </script>
 </body>
 </html> 
